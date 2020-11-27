@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat  Box</title>
+</head>
+<body>
+    <div style="width: 280px; height: 300px;">
+        <table class="table" id="databel" >
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+    
+    
+            <form name="chat_box">
+                <div style="margin-top: 270px; position:fixed;">
+                    <input id="chat" type="text" placeholder="Masukan Pesan"></input>
+                    <button onclick="simpan()" type="button">Kirim</button>
+                </div>
+    
+            </form>
+        </table>
+    </div>
+        
+    <script type="text/javascript">
+    
+        function simpan() {
+            let pesan = document.forms['chat_box']['chat'].value ;
+            let tabel = document.getElementById("databel");
+            let baris = tabel.insertRow(1);
+            let kol1 = baris.insertCell(0);
+            kol1.innerHTML = pesan;
+            }
+    </script>
+    
+</body>
+</html>

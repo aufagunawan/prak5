@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi</title>
+</head>
+<body>
+    <h1>Validasi</h1>
+
+    <form action="">
+        <label for="">Nama</label>
+        <input type="text" id="nama"><br>
+        <label for="">Email</label>
+        <input type="email" id="email"><br>
+        <label for="">Jam Keberangkatan</label>
+        <input type="time" id="jam" min="00:00" max="23.59"><br>
+        <label for="">Destinasi</label>
+        <input type="text" id="destinasi"><br>
+        <label for="">Jumlah Tiket</label>
+        <input type="number" id="tiket" min="1" max="10"><br>
+        <button type="button" onclick="validasi()">Submit</button>
+
+    </form>
+    
+    <h1 id="namapelanggan"></h1>
+    <h1 id="emailpelanggan"></h1>
+    <h1 id="jamkeberangkatan"></h1>
+    <h1 id="destinasipelanggan"></h1>
+    <h1 id="tiketpelanggan"></h1>
+
+    <script>
+        function validasi (){
+        
+        let nama = document.getElementById('nama').value;
+        let email = document.getElementById('email').value;
+        let jam = document.getElementById('jam').value;
+        let destinasi = document.getElementById('destinasi').value;
+        let tiket = document.getElementById('tiket').value;
+
+        if(nama == "" || nama.lenght > 30){
+
+            alert("Nama HARAP DI ISI!!");
+
+        }else if(email == ""){
+            alert("Email HARAP DI ISI!!");
+
+        }else if(jam == ""){
+            alert("Jam HARAP DI ISI!!");
+
+        }else if(destinasi == ""){
+            alert("Destinasi HARAP DI ISI!!");
+
+        }else if(tiket == ""){
+            alert("Tiket HARAP DI ISI!!")
+
+        }
+        else{
+            document.getElementById('namapelanggan').innerHTML= 'nama pelanggan : ' + nama + '<br>' ;
+            document.getElementById('emailpelanggan').innerHTML= 'email : ' + email + '<br>' ;
+            document.getElementById('jamkeberangkatan').innerHTML= 'jam keberangkatan : ' + jam + '<br>' ;
+            document.getElementById('destinasipelanggan').innerHTML= 'destinasi pelanggan : ' + destinasi + '<br>' ;
+            document.getElementById('tiketpelanggan').innerHTML= 'tiket pelanggan : ' + tiket + '<br>' ;
+        }
+        }
+    </script>
+</body>
+</html>

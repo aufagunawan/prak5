@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Silahkan Login</title>
+  <style type="text/css">
+    body{
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: verdana;
+      background-color: #f704ae;
+    }
+    form{
+      font-family: arial;
+      background-color: rgb(92, 250, 0);
+      width: 300px;
+      margin: 180px auto;
+      padding: 30px;
+      text-align: right;
+      color: #0a0a0a;
+      border-radius: 40px 10px;
+      box-shadow: 2px 2px 7px #222121;
+    }
+    input{
+      margin: 10px;
+    }
+    input.login{
+      background-color: #0ad5f0;
+      color: #ffffff;
+      font-family: verdana;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 5px 10px;
+      margin: 30px 10px auto 0px;
+      text-transform: uppercase;
+      transition: .2s;
+    }
+    input.login:hover{
+      background-color: #0023ec;
+      color: #0400ff;
+    }
+    p{
+      text-align:center;
+      margin: 40px auto;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #000000;
+      font-family: verdana;
+      background-color: #00c3ff;
+    }
+  </style>
+</head>
+<body>
+  <form action="Sukses.html" method="get" id="myForm" onsubmit=" return validasi()">
+    <p>selamat datang Para Juara</p>
+    Username  <input type="text" name="username" placeholder="Masukan Username Kamu">
+    Password  <input type="password" name="password" placeholder="Masukan password Kamu">
+    <input class="login" type="submit" name="submit" value="login">
+  </form>
+</body>
+<script type="text/javascript">
+  function validasi(){
+    var username = document.forms["myForm"]["username"].value;
+    var password = document.forms["myForm"]["password"].value;
+    if( username == "aufa1234" && password == "aufa1234"){
+      return true;
+    }
+    else if(username =="" || password ==""){
+      alert("Masukan username dan password Anda");
+      return false;
+    }
+    else{
+      alert("Username atau password yang Anda masukan SALAH");
+      return false;
+    }
+    
+  }
+</script>
+</html>

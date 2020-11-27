@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image picker</title>
+</head>
+<body style="margin: 500px">
+    
+    <center>
+        <select onchange="gantigambar();" id="listgambar">
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Motor_fino.jpg/180px-Motor_fino.jpg">Pilih Tipe Motor</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Motor_vespa_matic.jpg/800px-Motor_vespa_matic.jpg">Matic</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Motor_cruiser.jpg/180px-Motor_cruiser.jpg">Cruiser</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Motor_naked.jpg/180px-Motor_naked.jpg">Naked</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Motor_retro.jpg/180px-Motor_retro.jpg">Retro</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Motor_Sport.jpg/180px-Motor_Sport.jpg">Sport</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Bmw_r1200gs.jpg/180px-Bmw_r1200gs.jpg">Touring</option>
+        </select>
+    </center>
+        <br/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Motor_fino.jpg/180px-Motor_fino.jpg" style="width: 100%" id="gambar">
+</body>
+<script type="text/javascript">
+	function gantigambar() {
+		let gambar = document.getElementById("listgambar").value;
+		document.getElementById("gambar").src = gambar;
+		alert("Ini Gambar " + gambar);
+	}
+</script>
+</html>
